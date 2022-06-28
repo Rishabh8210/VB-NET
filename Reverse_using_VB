@@ -1,0 +1,15 @@
+Imports System
+Module Program
+    Sub Main(args As String())
+        Dim num, ans, i, tempNum As Integer
+        Console.Write("Enter a number : ")
+        num = Console.ReadLine()
+        tempNum = num
+        While num > 0
+            i = num Mod 10
+            ans = (ans * 10) + i
+            num = num \ 10
+        End While
+        Console.WriteLine(ans & " is the Reverse of " & tempNum)
+    End Sub
+End Module
