@@ -1,0 +1,17 @@
+Imports System
+Module Program
+    Sub Main()
+        Dim size As Integer
+        Console.WriteLine("Enter Size of Array : ")
+        size = Console.ReadLine()
+        Dim Arr(size) As Integer
+        Dim i As Integer
+        For i = 0 To size
+            Arr(i) = Console.ReadLine()
+        Next
+
+        For i = 0 To size
+            Console.WriteLine(Arr(i))
+        Next
+    End Sub
+End Module

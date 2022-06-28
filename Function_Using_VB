@@ -1,0 +1,88 @@
+'There are 2 Types of Procedures
+'1 -> Function (ReturnType)
+'2 -> Sub (No return Type)
+'There are 2 types for Argument 
+'1st is ByVal and 2nd is ByRef 
+Imports System
+Module Program
+    Sub greaterNumber(ByVal a As Integer, ByVal b As Integer)
+'or use Sub greaterNumber(ByRef a As Integer, ByRef b As Integer)
+        If a > b Then
+            Console.WriteLine("A is greater")
+        Else
+            Console.WriteLine("B is greater")
+        End If
+    End Sub
+    Sub Main(args As String())
+        Dim a, b As Integer
+        Console.WriteLine("Enter 2 number : ")
+        a = Console.ReadLine()
+        b = Console.ReadLine()
+        greaterNumber(a, b)
+    End Sub
+End Module
+
+Return Type Function
+Imports System
+Module Program
+    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)
+'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer)
+        If a > b Then
+            greaterNumber = a
+        Else
+            greaterNumber = b
+        End If
+    End Function
+    Sub Main(args As String())
+        Dim a, b, ans As Integer
+        Console.WriteLine("Enter 2 number : ")
+        a = Console.ReadLine()
+        b = Console.ReadLine()
+        ans = greaterNumber(a, b)
+        Console.WriteLine(ans &" is Greater ")
+    End Sub
+End Module
+
+Imports System
+Module Program
+    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)
+'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer)
+        Dim res As Integer
+        If a > b Then
+            res = a
+        Else
+            res = b
+        End If
+        Return res 'greaterNumber = res
+    End Function
+    Sub Main(args As String())
+        Dim a, b, ans As Integer
+        Console.WriteLine("Enter 2 number : ")
+        a = Console.ReadLine()
+        b = Console.ReadLine()
+        ans = greaterNumber(a, b)
+        Console.WriteLine(ans &" is Greater ")
+    End Sub
+End Module
+
+
+Return Type Function
+Imports System
+Module Program
+    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)
+'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer)
+        If a > b Then
+            Return a
+        Else
+            Return b
+        End If
+    End Function
+    Sub Main(args As String())
+        Dim a, b, ans As Integer
+        Console.WriteLine("Enter 2 number : ")
+        a = Console.ReadLine()
+        b = Console.ReadLine()
+        ans = greaterNumber(a, b)
+        Console.WriteLine(ans &" is Greater ")
+    End Sub
+End Module

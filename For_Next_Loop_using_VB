@@ -1,0 +1,17 @@
+Imports System
+Module Program
+    Sub Main()
+        Dim n, i As Integer
+        Console.WriteLine("Enter a Number : ")
+        n = Console.ReadLine()
+        i = 1
+        For i = 1 To n 'Step 1
+            Console.WriteLine(i)
+        Next
+    End Sub
+End Module
+
+'Step 1 means i = i + 1
+'Step 2 means i = i + 2
+'etc...
+
