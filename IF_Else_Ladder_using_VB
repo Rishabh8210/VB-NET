@@ -1,0 +1,19 @@
+Imports System
+Module Program
+    Sub Main(args As String())
+        Dim a, b As Integer
+        Dim c As Integer
+
+        Console.WriteLine("Enter 3 number : ")
+        a = Console.ReadLine()
+        b = Console.ReadLine()
+        c = Console.ReadLine()
+        If a > b And a > c Then
+            Console.WriteLine("A is greater")
+        ElseIf b > c And b > a Then
+            Console.WriteLine("B is greater")
+        Else
+            Console.WriteLine("C is greater")
+        End If
+    End Sub
+End Module

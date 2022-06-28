@@ -1,0 +1,17 @@
+Imports System
+Module Program
+    Sub Main()
+        Dim a As Char
+        a = Console.ReadLine()
+        Select Case (a)
+            Case "A"
+                Console.WriteLine("NEha")
+            Case "B"
+                Console.WriteLine("Jha")
+            Case "C", "D"
+                Console.WriteLine("Murgi")
+            Case Else
+                Console.WriteLine("Khtm suwar")
+        End Select
+    End Sub
+End Module

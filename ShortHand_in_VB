@@ -1,0 +1,19 @@
+'To avoid writing Console.WriteLine() instead of that use direectly Writeline() use System.Console
+Imports System.Console
+
+Module Program
+    Sub Main(args As String()) 'or Sub Main()  it is also possible
+        Dim a, b As Integer
+        
+        WriteLine("Enter 2 number : ")
+        a = ReadLine()
+        b = ReadLine()
+        If a > b Then
+            WriteLine("A is greater")
+        End If
+
+        If b > a Then
+            WriteLine("B is greater")
+        End If
+    End Sub
+End Module
