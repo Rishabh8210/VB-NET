@@ -8,7 +8,7 @@ Imports System
 Module Program
     Class A
         Public Overridable Sub Doggy()
-            Console.WriteLine("I am Rishabh Doggy !")
+            Console.WriteLine("I am Rishabh's Doggy !")
         End Sub
     End Class
     'Class B:Inherits A 'You can Do Like this or 
