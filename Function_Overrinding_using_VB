@@ -1,0 +1,32 @@
+'In Visual Basic,Method Overriding means override a base class method in the derive class by creating a method with the same name and signature to
+'perform a Different tasks...In VB Method Overrinding can be achived by using "Overridable" and "Overrides" Keywords along with the inheritance Principle
+'The base methods which we want to override in the derived class that need to be defined as "Overridable" keywords and we need to use Overrides keywoed in
+'derived class while defining the method with the same name and signature then only we can ovverides the base class methods to derived class
+'It is also known as Run-Time Polymorphims or Late Binding
+
+Imports System
+Module Program
+    Class A
+        Public Overridable Sub Doggy()
+            Console.WriteLine("I am Rishabh Doggy !")
+        End Sub
+    End Class
+    'Class B:Inherits A 'You can Do Like this or 
+    
+    Class B 'Like This
+        Inherits A
+        Public Overrides Sub Doggy()
+            Console.WriteLine("I am Your Doggy !")
+        End Sub
+    End Class
+    Sub Main()
+        'You can also Create Object like this
+        'Dim ObjA = New A()
+        'Dim ObjB = New B()
+        
+        Dim ObjA As New A()
+        Dim ObjB As New B()
+        ObjB.Doggy()
+    End Sub
+End Module
+
