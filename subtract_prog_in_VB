@@ -4,6 +4,8 @@ Module Program
     Sub Main(args As String())
         Dim a, b As Integer
         Dim c As Integer
+        a = Console.ReadLine()
+        b = Console.ReadLine()
         c = a - b
         Console.WriteLine("Sub :" & c)
     End Sub
