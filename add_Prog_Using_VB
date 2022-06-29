@@ -6,6 +6,7 @@ Module Program
         a = Console.ReadLine()
         b = Console.ReadLine()
         c = a + b
-        Console.WriteLine("Sum :" & c)
+        Console.WriteLine("Sum :" & c)'You can also write this to print value
+        'Console.WriteLine("Sum : {0}, c)
     End Sub
 End Module
