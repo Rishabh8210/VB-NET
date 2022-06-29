@@ -2,7 +2,7 @@ Imports System
 Module Program
     Class A
         Dim x, y As Integer
-        Sub New(ByVal first As Integer, ByVal second As Integer)
+        Sub New(ByVal first As Integer, ByVal second As Integer)'parametrished Constructor
             x = first
             y = second
         End Sub
