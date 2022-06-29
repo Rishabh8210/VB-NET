@@ -1,0 +1,36 @@
+Imports System
+Module Program
+    Class A
+        Dim x, y As Integer
+        Sub New() 'Default Constructor
+            x = 0
+            y = 0
+        End Sub
+        Sub New(ByVal first As Integer, ByVal second As Integer) 'Parametrished Constructor
+            x = first
+            y = second
+
+        End Sub
+        Sub New(ByVal copyObj As A) 'Copy Constructor
+            x = copyObj.x
+            y = copyObj.y
+        End Sub
+        Sub Disp()
+            Console.Write("Value of X is :" & x)
+            Console.WriteLine()
+            Console.Write("Value of Y is :" & y)
+            Console.WriteLine()
+        End Sub
+    End Class
+    Sub Main(args As String())
+        Dim Obj1 As New A(5, 19)
+        Dim obj2 As New A()
+        Dim Obj3 As New A(Obj1)
+        Console.WriteLine("Object 1 Data")
+        Obj1.Disp()
+        Console.WriteLine("Object 2 Data")
+        obj2.Disp()
+        Console.WriteLine("Object 3 Data")
+        Obj3.Disp()
+    End Sub
+End Module
