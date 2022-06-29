@@ -1,3 +1,7 @@
+'In Visual Basic,Method Overloading means defining Muktiple methods with the same name but with different parameters. By Using Method Overloading we can perform  
+'Different tasks with the same methods name by passing different parameters...in VB it is also known as Compile time Ploymorphims or early Binding
+'In VB.Net "Overloads" Keyword may be use to create Method Overloading  (class nd Object may use hoga without using v chalega)
+
 Imports System.Math 'To Perform Maths Operation Use this Package
 Imports System
 Module Program
