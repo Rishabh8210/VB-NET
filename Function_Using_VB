@@ -1,12 +1,14 @@
 'There are 2 Types of Procedures
 '1 -> Function (ReturnType)
+        Access_Specifier Function function_Name (Parameters) As ReturnType 
 '2 -> Sub (No return Type)
+        Access_Specifier Sub function_Name (Parameters) As ReturnType 
 'There are 2 types for Argument 
 '1st is ByVal and 2nd is ByRef 
 Imports System
 Module Program
-    Sub greaterNumber(ByVal a As Integer, ByVal b As Integer)
-'or use Sub greaterNumber(ByRef a As Integer, ByRef b As Integer)
+    Sub greaterNumber(ByVal a As Integer, ByVal b As Integer) As Integer
+'or use Sub greaterNumber(ByRef a As Integer, ByRef b As Integer) As Integer
         If a > b Then
             Console.WriteLine("A is greater")
         Else
@@ -25,8 +27,8 @@ End Module
 Return Type Function
 Imports System
 Module Program
-    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)
-'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer)
+    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)As Integer
+'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer) As Integer
         If a > b Then
             greaterNumber = a
         Else
@@ -45,8 +47,8 @@ End Module
 
 Imports System
 Module Program
-    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)
-'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer)
+    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)As Integer
+'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer)As Integer
         Dim res As Integer
         If a > b Then
             res = a
@@ -69,8 +71,8 @@ End Module
 Return Type Function
 Imports System
 Module Program
-    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)
-'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer)
+    Function greaterNumber(ByVal a As Integer, ByVal b As Integer)As Integer
+'or use Function greaterNumber(ByRef a As Integer, ByRef b As Integer)As Integer
         If a > b Then
             Return a
         Else
