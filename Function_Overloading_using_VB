@@ -1,13 +1,13 @@
 Imports System.Math 'To Perform Maths Operation Use this Package
 Imports System
 Module Program
-    Function area(ByRef radius As Integer)
+    Function area(ByRef radius As Integer) As Decimal
         Dim res As Decimal
         res = Math.PI * radius * radius 'To use PI value Write Math.PI were Math is a Class 
         Return res
     End Function
-    Function area(ByRef length As Integer, ByRef Breadth As Integer) 'Function OverLoading
-        Dim res As Decimal
+    Function area(ByRef length As Integer, ByRef Breadth As Integer)As Integer 'Function OverLoading
+        Dim res As Integer
         res = length * Breadth
         Return res
     End Function
@@ -16,11 +16,11 @@ Module Program
         Console.Write("Enter 2 Number : ")
         a = Console.ReadLine()
         b = Console.ReadLine()
-        Dim Ans As Decimal
+        Dim Ans,Ans1 As Decimal
         Ans = area(a)
         Console.Write("Area of Circle is : " & Ans)
         Console.WriteLine()
-        Ans = area(a, b)
-        Console.Write("Area of Rectangle is : " & Ans)
+        Ans1 = area(a, b)
+        Console.Write("Area of Rectangle is : " & Ans1)
     End Sub
 End Module
