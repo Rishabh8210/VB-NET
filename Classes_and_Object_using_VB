@@ -1,0 +1,19 @@
+Imports System
+Module Program
+    Class A
+        Dim x, y As Integer
+        Sub New(ByVal first As Integer, ByVal second As Integer)
+            x = first
+            y = second
+        End Sub
+        Sub Disp()
+            Console.Write("Value of X is :"&x)
+            Console.WriteLine()
+            Console.Write("Value of Y is :"&y)
+        End Sub
+    End Class
+    Sub Main(args As String())
+        Dim Obj As New A(5,19)
+        obj.Disp()
+    End Sub
+End Module
