@@ -8,6 +8,6 @@ Module Program
         Do 
             Console.WriteLine(i)
             i = i + 1
-        Loop While i <= 5
+        Loop While i <= n
     End Sub
 End Module
