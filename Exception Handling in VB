@@ -1,0 +1,31 @@
+
+
+
+What is an Exception?
+An exception is an unwanted error that occurs during the execution of a program and can be a system exception or application exception.
+Exceptions are nothing but some abnormal and typically an event or condition that arises during the execution, which may interrupt the normal flow of the program.
+An exception can occur due to different reasons, including the following:
+
+A user has entered incorrect data or performs a division operator, such as an attempt to divide by zero.
+A connection has been lost in the middle of communication, or system memory has run out
+
+///////////////    Example    /////////////////
+
+Imports System
+Module Program
+    Sub Main()
+        Dim x, y, z As Integer
+        x = 10
+        y = 0
+        Try
+            z = x \ y
+            'syntax : Catch exception_name As Exception
+        Catch pkdo As Exception
+            Console.WriteLine("Exception aaya hai because we r dividing a no with 0")
+            Console.WriteLine(pkdo) 'Exception msg Printing
+        Finally
+            Console.WriteLine("I don't care Exception aaye ya na aaye me chalunga")
+        End Try
+    End Sub
+End Module
+
