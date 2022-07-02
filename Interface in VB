@@ -1,0 +1,20 @@
+In VB.NET, the interface is similar to a class for inheriting all properties, methods, and events that a class or structure can implement.
+Using the interface in VB.NET, we can use multiple inheritances of classes. It uses the Implements keyword to "implement" the interfaces,
+and the "Interface" keyword is used to create the interface. All interfaces in VB.NET starts with i.
+
+Imports System
+Module Program
+    Interface A
+        Sub Name()
+    End Interface
+    Class B : Implements A
+        Public Sub Name() Implements A.Name
+            Console.WriteLine("Hamar Naaam Ba Ramuwa")
+        End Sub
+    End Class
+
+    Sub Main()
+        Dim Obj = New B() or Dim obj As New B()
+        Obj.Name()
+    End Sub
+End Module
