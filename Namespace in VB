@@ -1,0 +1,33 @@
+Namespace
+-Namespace Contains Classes
+-Allow to create your own namespace for holding classes 
+-By default classes are created in root namespace that is based on your project name
+
+syntax...
+Namespace Namespace_Name
+  public Class class_name
+     public Sub function_name()
+      .........
+      .........
+     End Sub
+  End Class
+End Namespace
+
+//////////////////////// Namespace Example ///////////////////////
+Imports System
+
+Namespace Pen
+    Class LikhoPheko
+        Sub Daam()
+            Console.WriteLine("Hello mera Daam 4 rupiya ho gya,,,,, i am celebrity now")
+        End Sub
+    End Class
+End Namespace
+
+
+Module Program
+    Sub Main()
+        Dim obj As New Pen.LikhoPheko() 'Pen.LikhoPheko() mtlb Pen ke under jakr "LikhoPheko class" ko access kro
+        obj.Daam()
+    End Sub
+End Module
