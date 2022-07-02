@@ -1,0 +1,35 @@
+'Calling Base Class Constructor from derived class in VB
+'here MyBase. is working as Super keyword
+Using MyBase.xyz change the scope of the program and send the scope to The base class 
+
+Imports System
+
+Module Program
+    Class Base
+        Private a As Integer
+
+        Public Sub New()
+            Console.WriteLine("Base Constructor")
+        End Sub
+        Public Overridable Sub Disp()
+            Console.WriteLine("Base Disp")
+        End Sub
+    End Class
+    Class Derived
+        Inherits Base
+        Public Sub New()
+            MyBase.New()
+            Console.WriteLine("Derived Constructor !")
+        End Sub
+        Public Overrides Sub Disp()
+            MyBase.Disp()
+            Console.WriteLine("Derived Disp")
+        End Sub
+
+    End Class
+    Sub Main()
+        Dim sheru As New Derived()
+        sheru.Disp()
+
+    End Sub
+End Module
