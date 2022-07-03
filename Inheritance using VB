@@ -1,0 +1,91 @@
+
+
+Inheritance is a fundamental principle of object-oriented programming. It allows a class to inherit the behavior or characteristics from base class to child class.
+
+It is a concept in which you define parent classes and child classes.
+The child classes inherit methods and properties of the parent class, but at the same time, they can also modify the behavior of the methods if required.
+The child class can also define methods of its own if required.
+The Inherits statement is used to declare a new class, called a derived class, based on an existing class, known as a base class.
+
+Inherits statement: Specifies the base class.
+NotInheritable modifier: Prevents programmers from using the class as a base class.
+MustInherit modifier: Specifies that the class is intended for use as a base class only. Instances of MustInherit classes cannot be created directly; they can only be created as base class instances of a derived class.
+
+//////////////////////Single Inheritance Code///////////////////////////
+
+Imports System
+Module Program
+    Class Cat
+        Public Sub Billi()
+            Console.WriteLine("I am a Cat and i Am Mausi of Lion !")
+        End Sub
+    End Class
+    'Class Lion:Inherits Cat 'or
+    Class Lion
+        Inherits Cat
+        Public Sub Roar()
+            Console.WriteLine("I am a Lion and i can Roar loudly !")
+        End Sub
+    End Class
+    Sub Main()
+        Dim sheru As New Lion()
+        sheru.Roar()
+        sheru.Billi()
+    End Sub
+End Module
+
+//////////////////////Multi-Level Inheritance Code///////////////////////////
+
+Imports System
+Module Program
+    Class Cat
+        Public Sub Billi()
+            Console.WriteLine("I am a Cat and i Am Mausi of Lion !")
+        End Sub
+    End Class
+    Class Dog : Inherits Cat
+        Public Sub kutta()
+            Console.WriteLine("I am a Dog and i can Bark loudly !")
+        End Sub
+    End Class
+    Class Animals
+        Inherits Dog
+        Public Sub status()
+            Console.WriteLine("Yaha Hamare paas kuch Janwar hai ! jinke naam kuch is prakar se hai !")
+        End Sub
+    End Class
+    Sub Main()
+        Dim sheru As New Animals() 
+        sheru.status()
+        sheru.kutta()
+        sheru.Billi()
+    End Sub
+End Module
+
+//////////////////////Multiple Inheritance Code///////////////////////////
+
+Imports System
+Module Program
+    Interface A
+        Sub myName()
+    End Interface
+    Interface B
+        Sub urName()
+    End Interface
+    Class C : Implements A, B
+        Public Sub myName() Implements A.myName
+            Console.WriteLine("Hamar Naaam Ba Ramuwa")
+        End Sub
+        Public Sub urName() Implements B.urName
+            Console.WriteLine("Hamarro naam Ramuwe ba ho !")
+        End Sub
+    End Class
+    Sub Main()
+        Dim Obj = New C() 'Dim obj As New C()
+        Obj.myName()
+        Obj.urName()
+    End Sub
+End Module
+
+
+
