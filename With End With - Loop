@@ -1,0 +1,58 @@
+
+
+'The With End Statement is not the same as a loop structure. It is used to access and execute statement on a
+'specified object without specifying the name of the object with each statement. Within a With statement block, you
+'can specify a member of an object that begins with a period (.) to detifine multiple statement
+
+'Syntax:
+'       With objExpression
+'           Statements
+'       End With
+
+'objExpression :- It defines the data type of objectExpression. It may be any class or structure type or basic data
+'                   type as Integer. It can be executed once in the With End statement
+'Statement:- It defines one or more executed statements within the With block. The statement refers to the member
+'               of the object that links with objExpression to execute the With statement block
+'End With :- It is used to end the With block.
+
+Imports System
+Module Program
+    Class MCR
+        'Members of class
+        Public name As String
+        Public examRoll As String
+        Public regRoll As String
+    End Class
+    Sub Main()
+        Dim Rishabh As New MCR()
+        'use Rishabh as reference
+
+
+        With Rishabh
+            'setting class members value using With End 
+            .name = "Rishabh Pandey"
+            .examRoll = "20MCRBS620089"
+            .regRoll = "MCR20620089"
+        End With
+
+
+        With Rishabh
+            'Printing data using Rishabh as refrence and refrence as Rishabh
+            Console.WriteLine("********MCR*********")
+            Console.Write("Name of student is " & .name)
+            Console.WriteLine()
+            Console.Write("Student Exam roll is " & .examRoll)
+            Console.WriteLine()
+            Console.Write("Student Registration roll is " & .regRoll)
+        End With
+
+
+    End Sub
+End Module
+
+
+
+'Basically smjhe toh With End With koi loop ni h ye bs ek method hai class ka members ko access krne ka or operation
+'perform krne ka ,ye bss ek hi barr chalega and (.) ki madad se easily member access kr skte
+' "object." likhne ki jarurt ni hai
+
