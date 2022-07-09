@@ -29,3 +29,39 @@ Module Program
     End Sub
 End Module
 
+
+//////////////////// Using User- Defined Exceptions using Throw keyword /////////////////////////
+
+'WAP in VB to Setting Passwords using Exception Handline ?
+
+Imports System
+Module Program
+    Sub Check(ByRef Name As String)
+        Dim errorFound As Integer
+        Try
+            If Name.Length < 8 Then
+                errorFound = errorFound + 1
+                Throw New ApplicationException("String Ka length Bahot Kam hai re baba")
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        Finally
+            If errorFound > 0 Then
+                Console.WriteLine("Pls Try Again !")
+            Else
+                Console.WriteLine("Sucessfully Passwor is Created !")
+
+            End If
+
+        End Try
+    End Sub
+    Sub Main()
+        Dim Pass As String
+        Console.Write("Create a Password : ")
+        Pass = Console.ReadLine()
+        Check(Pass)
+    End Sub
+End Module
+
+
+
